@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GiphyPickerViewController_Example' do
+  pod 'GiphyPickerViewController', :path => '../'
+
+  target 'GiphyPickerViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
