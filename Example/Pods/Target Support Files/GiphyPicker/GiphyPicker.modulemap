@@ -1,0 +1,6 @@
+framework module GiphyPicker {
+  umbrella header "GiphyPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

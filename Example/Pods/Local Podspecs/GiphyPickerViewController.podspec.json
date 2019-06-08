@@ -1,0 +1,31 @@
+{
+  "name": "GiphyPicker",
+  "version": "0.1.0",
+  "summary": "A short description of GiphyPickerViewController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Daniele Candotti/GiphyPickerViewController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Daniele Candotti": "daniele@candotti.info"
+  },
+  "source": {
+    "git": "https://github.com/Daniele Candotti/GiphyPickerViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "GiphyPickerViewController/Classes/**/*",
+  "resources": "GiphyPickerViewController/Assets/*.xib",
+  "dependencies": {
+    "GiphyCoreSDK": [
+      "~> 1.4.2"
+    ],
+    "SDWebImage": [
+      "~> 5.0.4"
+    ]
+  }
+}

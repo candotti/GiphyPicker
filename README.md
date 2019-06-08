@@ -1,9 +1,8 @@
-# GiphyPickerViewController
+# GiphyPicker
 
-[![CI Status](https://img.shields.io/travis/Daniele Candotti/GiphyPickerViewController.svg?style=flat)](https://travis-ci.org/Daniele Candotti/GiphyPickerViewController)
-[![Version](https://img.shields.io/cocoapods/v/GiphyPickerViewController.svg?style=flat)](https://cocoapods.org/pods/GiphyPickerViewController)
-[![License](https://img.shields.io/cocoapods/l/GiphyPickerViewController.svg?style=flat)](https://cocoapods.org/pods/GiphyPickerViewController)
-[![Platform](https://img.shields.io/cocoapods/p/GiphyPickerViewController.svg?style=flat)](https://cocoapods.org/pods/GiphyPickerViewController)
+[![Version](https://img.shields.io/cocoapods/v/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
+[![License](https://img.shields.io/cocoapods/l/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
+[![Platform](https://img.shields.io/cocoapods/p/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
 
 ## Example
 
@@ -13,17 +12,37 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-GiphyPickerViewController is available through [CocoaPods](https://cocoapods.org). To install
+GiphyPicker is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'GiphyPickerViewController'
+pod 'GiphyPicker'
 ```
+
+## Usage
+  ### Setup 
+
+* Get a token from [Giphy website](http://giphy.com/)
+* In the AppDelegate.swift add the token 
+  ```
+  GiphyPicker.defaultConfig(token: "<YourToken>")
+  ```
+### Present the picker
+To present the picker modally you can the code as follows
+```
+let picker = GiphyPicker.getViewController()
+present(picker, animated: true, completion: nil)
+```
+## Dependencies
+ 
+* [GiphyCoreSDK](https://github.com/Giphy/giphy-ios-sdk-core)
+* [SDWebImage](https://github.com/SDWebImage/SDWebImage)
+
 
 ## Author
 
-Daniele Candotti, daniele@candotti.info
+Daniele Candotti, support-{AT}-candotti.info
 
 ## License
 
-GiphyPickerViewController is available under the MIT license. See the LICENSE file for more info.
+GiphyPicker is available under the MIT license. See the LICENSE file for more info.

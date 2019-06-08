@@ -1,5 +1,5 @@
 import XCTest
-import GiphyPickerViewController
+import GiphyPicker
 
 class Tests: XCTestCase {
     
