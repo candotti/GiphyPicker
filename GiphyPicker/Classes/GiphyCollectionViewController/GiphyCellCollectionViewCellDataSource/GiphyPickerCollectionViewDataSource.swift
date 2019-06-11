@@ -10,7 +10,7 @@ import UIKit
 import GiphyCoreSDK
 
 /// CollectionView DataSource 
-final class GiphyListCollectionViewDataSource: NSObject {
+final class GiphyPickerCollectionViewDataSource: NSObject {
     
     /// Data interactor
     private var dataInteractor: DataInteractable
@@ -20,7 +20,7 @@ final class GiphyListCollectionViewDataSource: NSObject {
     }
 }
 
-extension GiphyListCollectionViewDataSource: UICollectionViewDataSource {
+extension GiphyPickerCollectionViewDataSource: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

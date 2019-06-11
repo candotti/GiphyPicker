@@ -13,7 +13,7 @@ typealias SearchableValues =  (query: String, limit: Int,
                               offset: Int,
                               success: (([GPHMedia]?) -> Void)?,
                               failure: ((String) -> Void)?)
-protocol Searchable {
+public protocol Searchable {
 
     func search(query: String,
                 limit: Int,

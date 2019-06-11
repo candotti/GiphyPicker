@@ -20,9 +20,9 @@ protocol DataInteractable {
                  failure: ((String) -> Void)?)
 }
 
-struct GiphyInfo {
-    let url: String
-    let size: CGSize
+public struct GiphyInfo {
+    public let url: String
+    public let size: CGSize
 }
 /// Layer to manage data from DataRetrival
 final class DataInteractor: DataInteractable {

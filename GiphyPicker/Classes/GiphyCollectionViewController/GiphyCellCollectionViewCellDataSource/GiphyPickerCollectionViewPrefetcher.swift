@@ -13,7 +13,7 @@ import SDWebImage
 let serialQueue = DispatchQueue(label: "com.GiphyPicker.prefetcher")
 
 /// CollectionView prefetcher
-final class GiphyListCollectionViewPrefetcher: NSObject {
+final class GiphyPickerCollectionViewPrefetcher: NSObject {
 
     /// Data interactor
     private var dataInteractor: DataInteractable
@@ -23,7 +23,7 @@ final class GiphyListCollectionViewPrefetcher: NSObject {
     }
 }
 
-extension GiphyListCollectionViewPrefetcher: UICollectionViewDataSourcePrefetching {
+extension GiphyPickerCollectionViewPrefetcher: UICollectionViewDataSourcePrefetching {
 
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {

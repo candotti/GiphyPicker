@@ -31,15 +31,15 @@ public struct GiphyPicker {
         }
     }
     
-    /// Build the rootViewController
-    public static func getViewController() -> UIViewController {
+    /// Get GiphyPickerViewController
+    public static func getViewController() -> GiphyPickerViewController {
         assert(GiphyPicker.giphyCoreHasCredentials(), "Api key is missing - use Giphy.configure(apiKey:)")
         let searchBarInteractor = SearchBarInteractor()
         let searchCore = SearchCore()
         let dataRetrival = DataRetrival(searchCore: searchCore)
         let dataInteractor = DataInteractor(dataRetrival: dataRetrival)
-        let collectionViewHandler = GiphyCollectionViewHandler()
-        let controller = GiphyListViewController(dataInteractor: dataInteractor,
+        let collectionViewHandler = GiphyCollectionViewHandler(dataInteractor: dataInteractor)
+        let controller = GiphyPickerViewController(dataInteractor: dataInteractor,
                                                  searchBarInteractor: searchBarInteractor,
                                                  collectionViewHandler: collectionViewHandler)
         dataInteractor.onNewSearchFinished = { [weak controller] in
@@ -61,7 +61,10 @@ public struct GiphyPicker {
                 }
             })
         }
-
+        collectionViewHandler.onTapOnCollectionViewCell = { [weak controller] giphyInfo in
+             controller?.onTapOnMedia?(giphyInfo)
+        }
+        
         searchBarInteractor.onChangeText = { [weak dataInteractor] string in
             dataInteractor?.search(query: string, success: nil, failure: { (errorMessage) in
                 DispatchQueue.main.async {

@@ -1,5 +1,5 @@
 //
-//  GiphyListViewController.swift
+//  GiphyPickerViewController.swift
 //  GiphyPicker
 //
 //  Created by daniele candotti on 29/05/2019.
@@ -12,36 +12,40 @@ import UIKit
 /// The controller contains one collectionView to show the gifs and
 /// a UISearchbar on the top to perform search with querys
 
-final class GiphyListViewController: UIViewController {
-
+public final class GiphyPickerViewController: UIViewController, GiphyPickerInteractable {
+    
+    public var onTapOnMedia: ((GiphyInfo?) -> ())?
     /// CollectionView to show gifs
     @IBOutlet weak private var collectionView: UICollectionView!
     /// Searchbar to search the gif by query
     @IBOutlet weak private var searchBar: UISearchBar!
     /// CollectionView dataSource
-    private var dataSource: GiphyListCollectionViewDataSource?
+    private var dataSource: GiphyPickerCollectionViewDataSource?
     /// CollectionView prefetcher
-    private var prefetcher: GiphyListCollectionViewPrefetcher?
+    private var prefetcher: GiphyPickerCollectionViewPrefetcher?
     /// CollectionView handler
     private var collectionViewHandler: CollectionViewInteractable?
     /// Data interactor
     private var dataInteractor: DataInteractable?
     /// Searchbar interactor
     private var searchBarInteractor: SearchBarInteractable?
+    /// User interactor provides all actions done by the user
+    private var userInteractor: GiphyCollectionViewUserInteractor?
 
     convenience init(dataInteractor: DataInteractable,
                      searchBarInteractor: SearchBarInteractable,
-                     collectionViewHandler: CollectionViewInteractable) {
-        let bundle = Bundle(for: GiphyListViewController.self)
-        self.init(nibName: "GiphyListViewController", bundle: bundle)
+                     collectionViewHandler: CollectionViewInteractable,
+                     userInteractor: GiphyCollectionViewUserInteractor? = nil) {
+        let bundle = Bundle(for: GiphyPickerViewController.self)
+        self.init(nibName: "GiphyPickerViewController", bundle: bundle)
         self.dataInteractor = dataInteractor
-        self.dataSource = GiphyListCollectionViewDataSource(dataInteractor: dataInteractor)
-        self.prefetcher = GiphyListCollectionViewPrefetcher(dataInteractor: dataInteractor)
+        self.dataSource = GiphyPickerCollectionViewDataSource(dataInteractor: dataInteractor)
+        self.prefetcher = GiphyPickerCollectionViewPrefetcher(dataInteractor: dataInteractor)
         self.collectionViewHandler = collectionViewHandler
         self.searchBarInteractor = searchBarInteractor
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         searchBar.delegate = searchBarInteractor

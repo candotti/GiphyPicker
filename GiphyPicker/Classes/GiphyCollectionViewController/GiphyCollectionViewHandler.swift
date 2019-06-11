@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias CollectionViewInteractable = CollectionViewEndlessLoading & UICollectionViewDelegateFlowLayout
+typealias CollectionViewInteractable = CollectionViewEndlessLoading & UICollectionViewDelegateFlowLayout & GiphyCollectionViewUserInteractor
 
 protocol CollectionViewEndlessLoading {
     
@@ -17,7 +17,7 @@ protocol CollectionViewEndlessLoading {
 }
 
 /// Manage CollectionViewEndlessLoading & UICollectionViewDelegateFlowLayout implementations
-final class GiphyCollectionViewHandler: NSObject, CollectionViewEndlessLoading {
+final class GiphyCollectionViewHandler: GiphyCollectionViewUserInteractor, CollectionViewEndlessLoading {
     
     /// On last items presented
     var onPresentingLastItems: (() -> Void)?

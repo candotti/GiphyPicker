@@ -15,11 +15,9 @@ import SDWebImage
 class GiphyPickerViewControllerTests: XCTestCase {
 
     func testCollectionViewDataSourceSetup() {
-        let searchCore = SearchCoreMock()
-        let dataRetrival = DataRetrival(searchCore: searchCore)
-        let dataInteractor = DataInteractor(dataRetrival: dataRetrival)
+        let dataInteractor = TestsUtils.getDataInteractor()
         dataInteractor.search(query: "Cat", success: nil, failure: nil)
-        let dataSource = GiphyListCollectionViewDataSource(dataInteractor: dataInteractor)
+        let dataSource = GiphyPickerCollectionViewDataSource(dataInteractor: dataInteractor)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
         XCTAssertEqual(dataSource.numberOfSections(in: collectionView), 1)
         XCTAssertEqual(dataSource.collectionView(collectionView, numberOfItemsInSection: 0), dataInteractor.data!.count)
@@ -29,9 +27,8 @@ class GiphyPickerViewControllerTests: XCTestCase {
     
     func testDataInteractorMustCallOnNewSearchFinished() {
         let exp = expectation(description: #function)
-        let searchCore = SearchCoreMock()
-        let dataRetrival = DataRetrival(searchCore: searchCore)
-        let dataInteractor = DataInteractor(dataRetrival: dataRetrival)
+
+        var dataInteractor = TestsUtils.getDataInteractor()
         dataInteractor.onNewSearchFinished = {
             exp.fulfill()
         }

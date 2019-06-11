@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     
     @IBAction func openPicker() {
         let picker = GiphyPicker.getViewController()
+        picker.onTapOnMedia = { giphyInfo in
+            print(giphyInfo?.url ?? "Error")
+        }
         present(picker, animated: true, completion: nil)
     }
 }

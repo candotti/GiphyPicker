@@ -98,11 +98,11 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/../../GiphyPicker/Assets/GiphyCollectionViewCell.xib"
-  install_resource "${PODS_ROOT}/../../GiphyPicker/Assets/GiphyListViewController.xib"
+  install_resource "${PODS_ROOT}/../../GiphyPicker/Assets/GiphyPickerViewController.xib"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/../../GiphyPicker/Assets/GiphyCollectionViewCell.xib"
-  install_resource "${PODS_ROOT}/../../GiphyPicker/Assets/GiphyListViewController.xib"
+  install_resource "${PODS_ROOT}/../../GiphyPicker/Assets/GiphyPickerViewController.xib"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

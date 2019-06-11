@@ -9,9 +9,7 @@
 import Foundation
 
 public struct GiphyPickerConfig {
-    public static func loadDefaults() {
-        
-    }
+    
     struct requests {
         static let maxItemsOnRequest = 20
         static let lastIndexPathToMakeNewRequest = 4
