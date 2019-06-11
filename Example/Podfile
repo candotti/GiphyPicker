@@ -1,11 +1,9 @@
 use_frameworks!
 
 target 'GiphyPicker_Example' do
-  pod 'GiphyPicker', :path => '../'
+  pod 'GiphyPicker', :path => '../', :testspecs => ['UnitTests']
 
   target 'GiphyPicker_Tests' do
     inherit! :search_paths
-
-    
   end
 end

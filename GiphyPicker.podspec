@@ -23,5 +23,8 @@ The only thing you need is a token generated from giphy.com website.
   s.source_files = 'GiphyPicker/Classes/**/*'
   s.resource = 'GiphyPicker/Assets/*.xib'
   s.dependency 'GiphyCoreSDK', '~> 1.4.2'
-  s.dependency 'SDWebImage', '~> 5.0.4' 
+  s.dependency 'SDWebImage', '~> 5.0.4'
+  s.test_spec 'UnitTests' do |test_spec|
+    test_spec.source_files = 'GiphyPicker/Tests/**/*.{h,m,swift}'
+  end
 end
