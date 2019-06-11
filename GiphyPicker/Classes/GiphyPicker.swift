@@ -12,7 +12,7 @@ import SDWebImage
 /// NavigationBuilder builds controller for the navigation
 public struct GiphyPicker {
     
-    static let sharedImageCache = SDImageCache(namespace: "com.candotti.ghipyPicker")
+    static let sharedImageCache = SDImageCache(namespace: "GiphyPicker.images.cache")
     
     public static func defaultConfig(token: String) {
         GiphyCore.configure(apiKey: token)
