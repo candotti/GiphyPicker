@@ -111,6 +111,10 @@ public final class GiphyPickerViewController: UIViewController, GiphyPickerInter
     }
     
     @IBAction func didTapOnDoneButton() {
-        onTapOnDoneButton?()
+        guard let onTapOnDoneButton = onTapOnDoneButton else {
+            dismiss(animated: true, completion: nil)
+            return
+        }
+        onTapOnDoneButton()
     }
 }
