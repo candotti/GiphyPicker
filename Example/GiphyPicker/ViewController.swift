@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         picker.onTapOnMedia = { giphyInfo in
             print(giphyInfo?.url ?? "Error")
         }
+        picker.onTapOnDoneButton = {
+            picker.dismiss(animated: true, completion: nil)
+        }
         present(picker, animated: true, completion: nil)
     }
 }

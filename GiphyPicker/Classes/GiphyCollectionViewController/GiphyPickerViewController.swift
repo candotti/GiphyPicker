@@ -14,11 +14,16 @@ import UIKit
 
 public final class GiphyPickerViewController: UIViewController, GiphyPickerInteractable {
     
+    /// User taps on done button
+    public var onTapOnDoneButton: (() -> ())?
+    /// User taps over the media
     public var onTapOnMedia: ((GiphyInfo?) -> ())?
     /// CollectionView to show gifs
     @IBOutlet weak private var collectionView: UICollectionView!
     /// Searchbar to search the gif by query
     @IBOutlet weak private var searchBar: UISearchBar!
+    /// Done button
+    @IBOutlet weak private var doneButton: UIButton!
     /// CollectionView dataSource
     private var dataSource: GiphyPickerCollectionViewDataSource?
     /// CollectionView prefetcher
@@ -31,6 +36,14 @@ public final class GiphyPickerViewController: UIViewController, GiphyPickerInter
     private var searchBarInteractor: SearchBarInteractable?
     /// User interactor provides all actions done by the user
     private var userInteractor: GiphyCollectionViewUserInteractor?
+    /// Hide done button
+    public var hideDoneButton: Bool = false {
+        didSet {
+            if isViewLoaded {
+                doneButton.isHidden = hideDoneButton
+            }
+        }
+    }
 
     convenience init(dataInteractor: DataInteractable,
                      searchBarInteractor: SearchBarInteractable,
@@ -49,6 +62,7 @@ public final class GiphyPickerViewController: UIViewController, GiphyPickerInter
         super.viewDidLoad()
         setupCollectionView()
         searchBar.delegate = searchBarInteractor
+        doneButton.isHidden = hideDoneButton
     }
 
     /// Setup CollectionView
@@ -94,5 +108,9 @@ public final class GiphyPickerViewController: UIViewController, GiphyPickerInter
         let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapOnDoneButton() {
+        onTapOnDoneButton?()
     }
 }

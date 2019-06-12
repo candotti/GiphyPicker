@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GiphyPickerViewController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GiphyPicker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -22,8 +22,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-5c-Qdn">
-                                <rect key="frame" x="150" y="318.5" width="75" height="30"/>
-                                <state key="normal" title="Show View"/>
+                                <rect key="frame" x="136" y="318.5" width="103" height="30"/>
+                                <state key="normal" title="Present Picker "/>
                                 <connections>
                                     <action selector="openPicker" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1kV-KC-tUq"/>
                                 </connections>
