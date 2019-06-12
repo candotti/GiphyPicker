@@ -1,5 +1,7 @@
 # GiphyPicker
 
+<img src="ScreenShot_iPhoneX.png" height="400">
+
 [![Version](https://img.shields.io/cocoapods/v/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
 [![License](https://img.shields.io/cocoapods/l/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
 [![Platform](https://img.shields.io/cocoapods/p/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
@@ -9,6 +11,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+* iOS 8 or later
+* Xcode 10 or later
 
 ## Installation
 
@@ -33,6 +38,7 @@ To present the picker modally you can the code as follows
 let picker = GiphyPicker.getViewController()
 present(picker, animated: true, completion: nil)
 ```
+
 ## Dependencies
  
 * [GiphyCoreSDK](https://github.com/Giphy/giphy-ios-sdk-core)
