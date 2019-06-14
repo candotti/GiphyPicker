@@ -1,6 +1,6 @@
 # GiphyPicker
 
-<img src="ScreenShot_iPhoneX.png" height="400">
+<img src="https://github.com/candotti/GiphyPicker/blob/master/ScreenShot_iPhoneX.png" height="400">
 
 [![Version](https://img.shields.io/cocoapods/v/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
 [![License](https://img.shields.io/cocoapods/l/GiphyPicker.svg?style=flat)](https://cocoapods.org/pods/GiphyPicker)
