@@ -18,6 +18,7 @@ The only thing you need is a token generated from giphy.com website.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniele Candotti' => 'daniele@candotti.info' }
   s.source           = { :git => 'https://github.com/candotti/GiphyPicker.git', :tag => s.version.to_s }
+  s.swift_version = '5.0'
   s.social_media_url = 'https://twitter.com/danielecandotti'
   s.ios.deployment_target = '10.0'
   s.source_files = 'GiphyPicker/Classes/**/*'

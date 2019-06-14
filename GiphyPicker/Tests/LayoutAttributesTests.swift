@@ -15,7 +15,7 @@ class LayoutAttributesTests: XCTestCase {
     func testLoadCacheAttributesShouldReturnRightDataCount() {
         let rect = CGRect(x: 0, y: 0, width: 600, height: 1000)
         let collectionView = CollectionViewMock(frame: rect, collectionViewLayout: UICollectionViewFlowLayout())
-        var data = [GiphyInfo(url: "", size: CGSize(width: 200, height: 200)),
+        let data = [GiphyInfo(url: "", size: CGSize(width: 200, height: 200)),
                     GiphyInfo(url: "", size: CGSize(width: 200, height: 200)),
                     GiphyInfo(url: "", size: CGSize(width: 200, height: 200)),
                     GiphyInfo(url: "", size: CGSize(width: 200, height: 200)),
