@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Get your token from ghiphy.com
-        GiphyPicker.defaultConfig(token: "<YOUR TOKEN>")
+        GiphyPicker.defaultConfig(token: "SyhCV6eygwl5nHlqkyS3K7Z7uGVlv769")
         return true
     }
 }
