@@ -1,6 +1,6 @@
 {
   "name": "GiphyPicker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "Picker for selecting Gifs from giphy.com",
   "description": "With GiphyPicker you can search and use a Giphy image in your project.\nThe only thing you need is a token generated from giphy.com website.",
   "homepage": "https://github.com/candotti/GiphyPicker",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/candotti/GiphyPicker.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "social_media_url": "https://twitter.com/danielecandotti",
   "platforms": {

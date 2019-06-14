@@ -28,7 +28,7 @@ class GiphyPickerViewControllerTests: XCTestCase {
     func testDataInteractorMustCallOnNewSearchFinished() {
         let exp = expectation(description: #function)
 
-        var dataInteractor = TestsUtils.getDataInteractor()
+        let dataInteractor = TestsUtils.getDataInteractor()
         dataInteractor.onNewSearchFinished = {
             exp.fulfill()
         }

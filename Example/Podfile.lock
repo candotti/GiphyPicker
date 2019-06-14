@@ -1,9 +1,9 @@
 PODS:
   - GiphyCoreSDK (1.4.2)
-  - GiphyPicker (0.1.0):
+  - GiphyPicker (0.1.1):
     - GiphyCoreSDK (~> 1.4.2)
     - SDWebImage (~> 5.0.4)
-  - GiphyPicker/UnitTests (0.1.0):
+  - GiphyPicker/UnitTests (0.1.1):
     - GiphyCoreSDK (~> 1.4.2)
     - SDWebImage (~> 5.0.4)
   - SDWebImage (5.0.4):
@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GiphyCoreSDK: 1a89e03e55dc6b636b9d40fde76107867dbb9da5
-  GiphyPicker: 73ce0297e9bdd7805408b54ffcbd841f66304aac
+  GiphyPicker: 7fe93cb0b6d4ce096b354a7af18013274b09b61e
   SDWebImage: c739016e4bdf0a4a1f9a04b5e0385395ad63a282
 
 PODFILE CHECKSUM: 5d2b5813b208ef3bdc65d63efbddf8b5a201f6e3

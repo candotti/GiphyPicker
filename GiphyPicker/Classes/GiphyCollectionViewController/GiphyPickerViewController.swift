@@ -17,7 +17,7 @@ public final class GiphyPickerViewController: UIViewController, GiphyPickerInter
     /// User taps on done button
     public var onTapOnDoneButton: (() -> ())?
     /// User taps over the media
-    public var onTapOnMedia: ((GiphyInfo?) -> ())?
+    public var onTapOnMedia: ((GiphyInfo?, UIImage?) -> ())?
     /// CollectionView to show gifs
     @IBOutlet weak private var collectionView: UICollectionView!
     /// Searchbar to search the gif by query

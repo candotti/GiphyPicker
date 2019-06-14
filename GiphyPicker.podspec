@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GiphyPicker'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Picker for selecting Gifs from giphy.com'
   s.description      = <<-DESC
 With GiphyPicker you can search and use a Giphy image in your project.
@@ -18,6 +18,7 @@ The only thing you need is a token generated from giphy.com website.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniele Candotti' => 'daniele@candotti.info' }
   s.source           = { :git => 'https://github.com/candotti/GiphyPicker.git', :tag => s.version.to_s }
+  s.swift_version = '5.0'
   s.social_media_url = 'https://twitter.com/danielecandotti'
   s.ios.deployment_target = '10.0'
   s.source_files = 'GiphyPicker/Classes/**/*'
