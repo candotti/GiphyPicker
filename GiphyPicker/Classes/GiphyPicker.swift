@@ -62,7 +62,8 @@ public struct GiphyPicker {
             })
         }
         collectionViewHandler.onTapOnCollectionViewCell = { [weak controller] giphyInfo in
-             controller?.onTapOnMedia?(giphyInfo)
+            let image = sharedImageCache.imageFromCache(forKey: giphyInfo?.url)
+            controller?.onTapOnMedia?(giphyInfo, image)
         }
         
         searchBarInteractor.onChangeText = { [weak dataInteractor] string in

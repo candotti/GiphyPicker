@@ -11,7 +11,7 @@ import GiphyCoreSDK
 /// GiphyPicker user events
 public protocol GiphyPickerInteractable {
     /// Called when the user taps on the media
-    var onTapOnMedia: ((GiphyInfo?) -> ())? { get set }
+    var onTapOnMedia: ((GiphyInfo?, UIImage?) -> ())? { get set }
     /// Called when the user taps on done button
     var onTapOnDoneButton: (() -> ())? { get set }
 }

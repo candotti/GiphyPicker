@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GiphyPicker'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Picker for selecting Gifs from giphy.com'
   s.description      = <<-DESC
 With GiphyPicker you can search and use a Giphy image in your project.

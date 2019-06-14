@@ -11,6 +11,8 @@ import GiphyPicker
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,11 +25,11 @@ class ViewController: UIViewController {
     
     @IBAction func openPicker() {
         let picker = GiphyPicker.getViewController()
-        picker.onTapOnMedia = { giphyInfo in
-            print(giphyInfo?.url ?? "Error")
-        }
-        picker.onTapOnDoneButton = {
-            picker.dismiss(animated: true, completion: nil)
+        picker.onTapOnMedia = { [weak self] giphyInfo, image in
+            DispatchQueue.main.async {
+                self?.imageView.image = image
+                picker.dismiss(animated: true, completion: nil)
+            }
         }
         present(picker, animated: true, completion: nil)
     }
